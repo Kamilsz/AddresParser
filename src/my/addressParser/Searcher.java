@@ -7,7 +7,6 @@ public class Searcher {
 
 	private String input_text;
 
-	
 
 	public String getInput_text() {
 		return input_text;
@@ -97,13 +96,14 @@ public class Searcher {
 		return bag;
 	}
 
-	private String finder(String input) {
+	private String finder(String input) {		
 		String result = null;
 		Pattern pattern = Pattern.compile(input);
 		Matcher matcher = pattern.matcher(input_text);
 		if (matcher.find()) {
 			result = matcher.group();
 		}
+		System.out.println(result);
 		return result;
 	}
 }
